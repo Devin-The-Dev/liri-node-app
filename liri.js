@@ -9,8 +9,8 @@ var request = require('request');
 
 //API key variables
 var spotify = new Spotify(keys.spotify);
-var bitKey = keys.bit.key;
-var omdb = keys.omdb.key;
+//var bitKey = keys.bit.key;
+//var omdb = keys.omdb.key;
 
 function search() {
     var searchTerm = process.argv[2];
@@ -33,9 +33,9 @@ function dataBase(searchTerm, searchName) {
 }
 
 function searchSpotify(searchName) {
-    spotify.searchName({
-        trype: 'track',
-        query: search
+    spotify.search({
+        type: 'track',
+        query: searchName
     }, function (error, data) {
         if (error) {
             return console.log('Error occurred: ' + error);
