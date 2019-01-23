@@ -5,7 +5,10 @@ exports.spotify = {
     secret: process.env.SPOTIFY_SECRET
 };
 
-var query = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
+exports.bit = {
+    key: process.env.BIT_Key
+}
 
-//OMDB API Key = e3eed826
-//http://www.omdbapi.com/?i=tt3896198&apikey=e3eed826
+exports.omdb = {
+    key: process.env.OMDB_Key
+}
