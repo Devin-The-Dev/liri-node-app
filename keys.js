@@ -12,3 +12,7 @@ exports.bit = {
 exports.omdb = {
     key: process.env.OMDB_Key
 }
+
+//var bandsintown = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
+
+//var omdb = "http://www.omdbapi.com/?i=tt3896198&apikey=e3eed826&t=" + movieTitle;
