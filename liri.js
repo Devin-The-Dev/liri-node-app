@@ -85,7 +85,8 @@ function searchBIT(searchName) {
 }
 
 function searchOMDB(searchName) {
-    axios.get()//Incert variable
+    let movieURL =
+        axios.get(movieURL)//Incert variable
     // .then(function (response) {
     //     console.length(response.data[1]);
     //     for (j = 0; j < response.data.length; j++)
