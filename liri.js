@@ -10,7 +10,7 @@ var request = require('request');
 //API key variables
 var spotify = new Spotify(keys.spotify);
 var bitKey = keys.bit.key;
-var omdb = keys.omdb.key;
+//var omdb = keys.omdb.key;
 
 function search() {
     var searchTerm = process.argv[2];
@@ -19,8 +19,6 @@ function search() {
 }
 
 function dataBase(searchTerm, searchName) {
-    console.log(searchTerm);
-    console.log(searchName);
     switch (searchTerm) {
         case 'spotify-this-song':
             {
@@ -31,10 +29,10 @@ function dataBase(searchTerm, searchName) {
             {
                 searchBIT(searchName)
             }
-        case 'movie-this':
-            {
-                searchOMDB(searchName)
-            }
+        // case 'movie-this':
+        //     {
+        //         searchOMDB(searchName)
+        //     }
         default:
             {
                 console.log('Something is broken');
@@ -43,7 +41,6 @@ function dataBase(searchTerm, searchName) {
 }
 
 function searchSpotify(searchName) {
-    console.log(searchName);
     spotify.search({
         type: 'track',
         query: searchName
@@ -84,12 +81,12 @@ function searchBIT(searchName) {
         });
 }
 
-function searchOMDB(searchName) {
-    let movieURL =
-        axios.get(movieURL)//Incert variable
-    // .then(function (response) {
-    //     console.length(response.data[1]);
-    //     for (j = 0; j < response.data.length; j++)
-    // });
-}
+// function searchOMDB(searchName) {
+//     let movieURL =
+//         axios.get(movieURL)//Incert variable
+//      .then(function (response) {
+//          console.length(response.data[1]);
+//          for (j = 0; j < response.data.length; j++)
+//      });
+// }
 search();
